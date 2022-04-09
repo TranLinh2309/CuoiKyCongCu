@@ -29,7 +29,16 @@ namespace Demo
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            
+            txtUserName.Text = "admin";
+            txtPassWord.Text = "admin";
+            if (this.txtUserName.Text == "admin" && this.txtPassWord.Text == "admin")
+            {
+                MessageBox.Show("Bạn đăng nhập thành công");
+            }
+            else
+            {
+                MessageBox.Show("Bạn đăng nhập không thành công");
+            }
         }
     }
 }
