@@ -16,5 +16,35 @@ namespace Demo
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            
+                DialogResult dg = MessageBox.Show("Bạn có chắc muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dg == DialogResult.OK)
+                {
+                    Application.Exit();
+                }
+            
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            txtUserName.Text = "admin";
+            txtPassWord.Text = "admin";
+            if (this.txtUserName.Text == "admin" && this.txtPassWord.Text == "admin")
+            {
+                MessageBox.Show("Bạn đăng nhập thành công");
+            }
+            else
+            {
+                MessageBox.Show("Bạn đăng nhập không thành công");
+            }
+        }
     }
 }
