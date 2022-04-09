@@ -24,7 +24,13 @@ namespace Demo
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
+                DialogResult dg = MessageBox.Show("Bạn có chắc muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dg == DialogResult.OK)
+                {
+                    Application.Exit();
+                }
+            
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
